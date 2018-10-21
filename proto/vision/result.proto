@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package vision;
+
+message OcrResult {
+    repeated Line lines = 3;
+}
+
+message Line {
+    repeated Word words = 1;
+    Rect a = 2;
+    Rect b = 3;
+    string value = 4;
+    string language = 8;
+    Rect c = 19;
+}
+
+message Character {
+    Rect bounding_box = 2;
+    string value = 4;
+}
+
+message Word {
+    repeated Character characters = 1;
+    Rect bounding_box = 2;
+    string value = 4;
+    string language = 8;
+}
+
+message Rect {
+    int32 x = 1;
+    int32 y = 2;
+    int32 width = 3;
+    int32 height = 4;
+    float angle = 5;
+}

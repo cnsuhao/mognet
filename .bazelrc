@@ -1,0 +1,1 @@
+build --copt=-m32 --cxxopt=-m32 --linkopt=-m32
