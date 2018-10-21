@@ -3,7 +3,7 @@ load("@io_bazel_rules_docker//cc:image.bzl", "cc_image")
 load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 
 cc_binary(
-    name = "zocr",
+    name = "zorc",
     srcs = glob(["src/*.cpp", "src/*.h", "src/symbols/*.h"]),
     copts = ["-m32"],
     linkopts = ["-m32", "-L/usr/lib32", "-lrt", "-ldl"],
